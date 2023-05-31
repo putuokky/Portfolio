@@ -1,32 +1,39 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import Sitename from './Sitename';
-import { useRouter } from 'next/router';
 import { AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
+import { usePathname, useSearchParams } from 'next/navigation';
 
 export default function Navbar() {
   const [nav, setNav] = useState(false)
   const [color, setColor] = useState('transparent')
   const [textColor, setTextColor] = useState('#38bdf8')
-  // const router = useRouter()
+  const searchParams = useSearchParams();
+  const pathname = usePathname()
 
   const handleNav = () => {
     setNav(!nav);
   }
 
-  useEffect(() => {
-    const changeColor = () => {
-      if (window.scrollY >= 90) {
-        setColor('#111827')
-        setTextColor('#38bdf8')
-      } else {
-        setColor('transparent')
-        setTextColor('#38bdf8')
-      }
-    }
-    window.addEventListener('scroll', changeColor)
-  }, [])
+  // useEffect(() => {
+  //   const changeColor = () => {
+  //     if (window.scrollY >= 90) {
+  //       setColor('#111827')
+  //       setTextColor('#38bdf8')
+  //     } else {
+  //       setColor('transparent')
+  //       setTextColor('#38bdf8')
+  //     }
+  //   }
+  //   window.addEventListener('scroll', changeColor)
+  // }, [])
+
+  // useEffect(() => {
+  //   const url = pathname + searchParams.toString()
+  //   console.log(url)
+
+  // }, [pathname, searchParams])
 
   const menus = [
     { text: 'Home', href: '/' },
@@ -37,16 +44,17 @@ export default function Navbar() {
   ];
 
   return (
-    <header className='fixed top-0 left-0 z-10 flex w-full duration-300 ease-out'>
-      <nav className='container flex items-center justify-between px-4 py-4 mx-auto bg-transparent'>
+    <header className='top-0 left-0 z-10 flex w-full'>
+      {/* <header className='fixed top-0 left-0 z-10 flex w-full'> */}
+      <nav className='container flex items-center justify-between mx-8 my-4 bg-transparent'>
         <Link href='/'>
-          <h1 className='text-3xl font-bold uppercase text-sky-400 hover:text-sky-300 hover:duration-300 hover:ease-in'><Sitename /></h1>
+          <h1 className='text-3xl font-bold capitalize text-sky-400 hover:text-sky-300 hover:duration-300 hover:ease-in'><Sitename /></h1>
         </Link>
 
         {/* menu */}
         <ul className='hidden text-gray-400 sm:flex'>
           {menus.map((menu) => (
-            <li key={menu.text} className={`p-4 font-semibold hover:underline-offset-8 hover:decoration-1 hover:underline hover:decoration-sky-400 hover:text-sky-300`}>
+            <li key={menu.text} className={`p-4 font-semibold hover:underline-offset-8 hover:decoration-1 hover:underline hover:decoration-sky-400 hover:text-sky-300 ${pathname == menu.href ? 'active' : ''}`}>
               <Link href={menu.href}>{menu.text}</Link>
             </li>
           ))}
@@ -70,7 +78,7 @@ export default function Navbar() {
         <ul className={`absolute top-0 bottom-0 ${nav ? "left-0" : "left-[100%]"
           } right-0 flex flex-col items-center justify-center w-full h-screen text-center duration-300 ease-in bg-gray-900 text-gray-400 sm:hidden`}>
           {menus.map((menu) => (
-            <li key={menu.text}>
+            <li key={menu.text} className={`p-4 font-semibold hover:underline-offset-8 hover:decoration-1 hover:underline hover:decoration-sky-400 ${pathname == menu.href ? 'active' : ''}`}>
               <Link href={menu.href}>{menu.text}</Link>
             </li>
           ))}

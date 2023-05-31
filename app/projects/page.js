@@ -2,8 +2,8 @@ import React from 'react'
 
 export const metadata = {
   title: 'Projects',
-  // description: 'projects',
-}
+  description: 'The React Framework for the Web',
+};
 
 export default function Projects() {
   return (
