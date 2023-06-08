@@ -1,10 +1,8 @@
 'use client';
 import Navbar from '@/components/Navbar'
 import './globals.css'
-// import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
-
-// const inter = Inter({ subsets: ['latin'] })
+// import { poppins, roboto_mono } from './font';
 
 export const metadata = {
   title: {
@@ -19,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
-        <main className='w-full text-white'>
+        <main className='container mx-auto text-white'>
           {children}
         </main>
         <Footer />
