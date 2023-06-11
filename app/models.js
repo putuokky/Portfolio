@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import LoadingSpinner from '@/components/loading/loading-spinner';
 import Spline from '@splinetool/react-spline'
 import React, { useState } from 'react'

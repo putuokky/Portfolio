@@ -7,6 +7,10 @@ import Dominos from "./models";
 export const metadata = {
   title: "Okky Maheswara",
   description: "The React Framework for the Web",
+  openGraph: {
+    title: 'Home',
+  },
+  keywords: ['NextJS', 'React', 'JavaScript', 'Portfolio'],
 };
 
 export default function Home() {
