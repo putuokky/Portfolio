@@ -2,7 +2,9 @@
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import Footer from '@/components/Footer'
-// import { poppins, roboto_mono } from './font';
+import { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const metadata = {
   title: {
@@ -13,6 +15,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
     <html lang="en">
       <body>
