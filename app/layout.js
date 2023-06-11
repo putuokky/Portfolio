@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Contact from '@/components/Contact';
 
 // export const metadata = {
 //   generator: 'Next.js',
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
+        <Contact />
         <main className='container mx-auto text-white'>
           {children}
         </main>

@@ -24,7 +24,7 @@ export default function Home() {
         <h2 className="pb-4 text-4xl font-semibold text-primary md:pb-8 md:text-5xl lg:text-6xl" data-aos="fade-up">Lorem ipsum dolor sit amet.</h2>
         <p className="w-full text-sm leading-relaxed text-primary md:w-[540px] md:text-base" data-aos="zoom-in-up">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est doloremque velit animi corrupti non fuga pariatur sequi! Autem, facere modi?</p>
         <div className="mt-10 text-sm md:mt-14" data-aos="flip-up">
-          <Link href="#" className="rounded-[4px] border-2 border-accent px-7 py-5 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10">
+          <Link href="#" target="_blank" className="rounded-[4px] border-2 border-accent px-7 py-5 text-accent transition-all duration-300 hover:bg-accent hover:bg-opacity-10">
             <Button>View My CV here!</Button>
           </Link>
         </div>
