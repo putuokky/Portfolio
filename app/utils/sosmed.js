@@ -1,4 +1,4 @@
-const sosmeds = [
+[
   {
     name: 'Facebook',
     link: 'https://www.facebook.com/okkymahes/',

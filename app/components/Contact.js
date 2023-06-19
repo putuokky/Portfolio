@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { sosmeds } from '@/utils/sosmed'
+// import { sosmeds } from '@/utils/sosmed'
 
 export default function Contact() {
   return (

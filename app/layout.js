@@ -1,11 +1,11 @@
 'use client'
-import Navbar from '@/components/Navbar'
 import './globals.css'
-import Footer from '@/components/Footer'
 import { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Contact from '@/components/Contact';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 // export const metadata = {
 //   generator: 'Next.js',

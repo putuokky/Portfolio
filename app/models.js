@@ -1,7 +1,7 @@
 'use client'
-import LoadingSpinner from '@/components/loading/loading-spinner';
 import Spline from '@splinetool/react-spline'
 import React, { useState } from 'react'
+import LoadingSpinner from './components/loading/loading-spinner';
 
 export default function Dominos() {
   const [loading, setLoading] = useState(true);

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import secret from '@images/secret.webp';
-import Button from "@/components/Button";
 import Dominos from "./models";
+import Button from "./components/Button";
 
 export const metadata = {
   title: "Okky Maheswara",
