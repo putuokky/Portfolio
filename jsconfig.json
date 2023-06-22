@@ -4,7 +4,6 @@
     "paths": {
       "@/*": ["./*"],
       "@images/*": ["./public/images/*"],
-      "@lib/*": ["./app/lib/*"],
     }
   }
 }

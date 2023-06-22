@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { sosmeds } from '@lib/datas'
+import { sosmeds } from '@/lib/datas'
 
 export default function Contact() {
   const emails = [{ email: 'okkymahes@gmail.com' }]
@@ -29,6 +29,6 @@ export default function Contact() {
           <div className='mt-4 h-20 w-[1px] bg-primary'></div>
         </div>
       </div>
-    </div >
+    </div>
   )
 }
