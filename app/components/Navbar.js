@@ -38,9 +38,9 @@ export default function Navbar() {
   const menus = [
     { text: 'Home', href: '/' },
     { text: 'About', href: '/about' },
-    { text: 'Projects', href: '/projects' },
-    { text: 'Blog', href: '/blog' },
-    { text: 'Contact', href: '/contact' },
+    // { text: 'Projects', href: '/projects' },
+    // { text: 'Blog', href: '/blog' },
+    // { text: 'Contact', href: '/contact' },
   ];
 
   return (
